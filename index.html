@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dan Henke — About Me</title>
+  <meta name="description" content="Dan Henke" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dan Henke" />
+  <meta property="og:description" content="Links and contact details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="dan-cto-action-figure.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    
+    html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: #fff;
+      background: #000;
+      display: grid;
+      place-items: center;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    main {
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero {
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .hero img {
+      display: block;
+      margin: 10px 0;
+      max-height: 90svh;
+    }
+
+    .links {
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      justify-content: center; 
+      gap: clamp(12px, 2vw, 24px);
+    }
+
+    .link {
+      --padY: 0.75em; --padX: 1em;
+      display: inline-flex; align-items: center; gap: 0.6em;
+      padding: var(--padY) var(--padX);
+      border-radius: 999px; text-decoration: none; color: var(--fg);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: saturate(120%) blur(6px);
+      -webkit-backdrop-filter: saturate(120%) blur(6px);
+      transition: transform 160ms ease, background-color 160ms ease, outline-color 160ms ease;
+      outline: 2px solid transparent; outline-offset: 3px;
+      font-size: clamp(14px, 1.6vw, 16px);
+    }
+    
+    .link:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.12);
+    }
+    
+    .link:active {
+      transform: translateY(0);
+    }
+    
+    .link:focus-visible {
+      outline-color: currentColor;
+    }
+    
+    .link svg {
+      width: 1.2em;
+      height: 1.2em;
+      flex: 0 0 auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    .link span {
+      letter-spacing: 0.01em;
+      overflow-wrap: anywhere;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="site-title">
+      <img src="dan-cto-action-figure.png" alt="Dan Henke CTO action figure" loading="eager" />
+
+      <nav class="links" aria-label="Contact Links">
+        <a class="link" href="mailto:contact@danhenke.au">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <span>contact@danhenke.au</span>
+        </a>
+
+        <a class="link" href="https://linkedin.com/in/dan-henke" target="_blank" rel="noreferrer noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true">
+            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+          </svg>
+          <span>linkedin.com/in/dan-henke</span>
+        </a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>
